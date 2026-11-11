@@ -1,10 +1,10 @@
 {
-  "name": "makeflow-toolkit",
-  "version": "1.0.0",
+  "name": "pocketflow",
+  "version": "0.1.0",
   "private": true,
-  "description": "Production-ready Next.js starter toolkit with Docker & Makefile DX automation",
+  "description": "Personal finance and budget planning application",
   "author": "SvenCodesSimple",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "type": "module",
   "packageManager": "pnpm@11.18.0",
   "scripts": {
