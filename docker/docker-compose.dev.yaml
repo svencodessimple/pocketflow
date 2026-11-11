@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ..:/app
+      - /app/node_modules
+      - /app/.next

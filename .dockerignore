@@ -1,0 +1,21 @@
+# Dependencies & Builds
+node_modules
+.next
+out
+build
+
+# Git & IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Environment & Secrets (wichtig!)
+.env
+.env*.local
+
+# Logs & Cache
+*.log
+pnpm-debug.log*
+.pnpm-store
+.turbo

@@ -1,0 +1,24 @@
+FROM node:26-alpine3.24@sha256:d431b1d60cd8de74dc66d271c236f66227998c308e011e60faa9c60dc4d37382
+
+WORKDIR /app
+
+# Die in package.json festgelegte pnpm-Version installieren
+RUN npm install --global pnpm@11.18.0
+
+# Dependency-Dateien kopieren für effizientes Caching
+COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml* ./
+
+# Entwicklungs-Dependencies installieren
+RUN pnpm install
+
+# Quellcode kopieren
+COPY . .
+
+# Port für Next.js freigeben
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Dev-Server mit Hot-Reloading starten
+CMD ["pnpm", "dev"]
