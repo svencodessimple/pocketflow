@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { db } from '@/lib/db/pool';
 import type { CreateWorkspaceInput, WorkspaceWithMembership } from './workspaceTypes';
 
